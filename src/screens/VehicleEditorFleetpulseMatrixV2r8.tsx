@@ -30,16 +30,16 @@ export function VehicleEditorFleetpulseMatrixV2r8({ actions }: VehicleEditorFlee
       </header>
       {/* SideNavBar (Desktop Only) */}
       <nav className="hidden md:flex flex-col h-full py-6 px-4 gap-stack-tight bg-surface-container-low border-r border-outline-variant fixed left-0 top-0 h-full w-sidebar-width z-50">
-      <button className="mb-8 text-left" type="button" disabled>
-      <span className="block font-headline-md text-headline-md font-bold text-primary mb-6">FleetPulse Matrix</span>
-      <span className="flex items-center gap-3">
+      <div className="mb-8 text-left">
+      <h1 className="block font-headline-md text-headline-md font-bold text-primary mb-6">FleetPulse Matrix</h1>
+      <div className="flex items-center gap-3">
       <img alt="Fleet Manager Avatar" className="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKpQz-pGkWhDAmuGc_WjMxtfKd7A7ok0Ntc7mj7npAvfMWtyoY47ztRzj9NhfS6NE1PBmysbqj77eiddD_YPB17maru0EWNR8QoS56YHQ4diILvsZi6FmMU-nfwYKl6iDm68DflQXq9ir5g5HrjrkB6rgkkQL7xOGmXJJ8lkvkZZ5Pu7lKl9pIbIEsaXasT2V_MrLNscsYJ_rwcBS97t8qPuSKcgRU0lt0B2wW_-N4gPl1hlb4adlAw78krB7KRK6Kz_jzo26rbUk" />
-      <span>
-      <span className="block font-headline-md text-headline-md text-on-surface">Fleet Manager</span>
-      <span className="block font-body-sm text-body-sm text-on-surface-variant">Central Command</span>
-      </span>
-      </span>
-      </button>
+      <div>
+      <div className="block font-headline-md text-headline-md text-on-surface">Fleet Manager</div>
+      <div className="block font-body-sm text-body-sm text-on-surface-variant">Central Command</div>
+      </div>
+      </div>
+      </div>
       <button className="w-full bg-primary text-on-primary py-2 px-4 rounded font-label-caps text-label-caps mb-6 hover:bg-surface-tint transition-colors" type="button" data-action-id="create-task-1" onClick={actions?.["create-task-1"]}>Create Task</button>
       <div className="flex flex-col gap-2 flex-grow">
       {/* Active Tab */}
