@@ -1,0 +1,403 @@
+[
+  {
+    "screenId": "026c0fb28cff4dccad6ccf11bec47c83",
+    "title": "Vehicle Editor - FleetPulse Matrix V2R8",
+    "componentName": "VehicleEditorFleetpulseMatrixV2r8",
+    "file": "src/screens/VehicleEditorFleetpulseMatrixV2r8.tsx",
+    "buttons": 3,
+    "inputs": 4,
+    "links": 6,
+    "actions": [
+      {
+        "id": "create-task-1",
+        "kind": "button",
+        "label": "Create Task",
+        "index": 0
+      },
+      {
+        "id": "cancel-edit-2",
+        "kind": "button",
+        "label": "Cancel Edit",
+        "index": 1
+      },
+      {
+        "id": "save-record-3",
+        "kind": "button",
+        "label": "Save Record",
+        "index": 2
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "queue-2",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "help-4",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "logout-5",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "link-6",
+        "kind": "link",
+        "label": "#",
+        "href": "#",
+        "index": 5
+      }
+    ]
+  },
+  {
+    "screenId": "bc34c1a5c114407095b96e073e384606",
+    "title": "Vehicle Operations - FleetPulse Matrix V2R8",
+    "componentName": "VehicleOperationsFleetpulseMatrixV2r8",
+    "file": "src/screens/VehicleOperationsFleetpulseMatrixV2r8.tsx",
+    "buttons": 13,
+    "inputs": 2,
+    "links": 0,
+    "actions": [
+      {
+        "id": "create-task-1",
+        "kind": "button",
+        "label": "Create Task",
+        "index": 0
+      },
+      {
+        "id": "retry-load-2",
+        "kind": "button",
+        "label": "Retry Load",
+        "index": 1
+      },
+      {
+        "id": "create-record-3",
+        "kind": "button",
+        "label": "Create Record",
+        "index": 2
+      },
+      {
+        "id": "status-4",
+        "kind": "button",
+        "label": "Status",
+        "index": 3
+      },
+      {
+        "id": "priority-5",
+        "kind": "button",
+        "label": "Priority",
+        "index": 4
+      },
+      {
+        "id": "button-6-6",
+        "kind": "button",
+        "label": "Button 6",
+        "index": 5
+      },
+      {
+        "id": "button-7-7",
+        "kind": "button",
+        "label": "Button 7",
+        "index": 6
+      },
+      {
+        "id": "button-8-8",
+        "kind": "button",
+        "label": "Button 8",
+        "index": 7
+      },
+      {
+        "id": "button-9-9",
+        "kind": "button",
+        "label": "Button 9",
+        "index": 8
+      },
+      {
+        "id": "button-10-10",
+        "kind": "button",
+        "label": "Button 10",
+        "index": 9
+      },
+      {
+        "id": "button-11-11",
+        "kind": "button",
+        "label": "Button 11",
+        "index": 10
+      },
+      {
+        "id": "log-event-12",
+        "kind": "button",
+        "label": "Log Event",
+        "index": 11
+      },
+      {
+        "id": "view-full-13",
+        "kind": "button",
+        "label": "View Full",
+        "index": 12
+      }
+    ]
+  },
+  {
+    "screenId": "0ed5add801c44a46a138b255b61c6702",
+    "title": "Queue and Status Management - FleetPulse Matrix V2R8",
+    "componentName": "QueueAndStatusManagementFleetpulseMatrixV2r8",
+    "file": "src/screens/QueueAndStatusManagementFleetpulseMatrixV2r8.tsx",
+    "buttons": 9,
+    "inputs": 1,
+    "links": 5,
+    "actions": [
+      {
+        "id": "create-task-1",
+        "kind": "button",
+        "label": "Create Task",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "button-3-3",
+        "kind": "button",
+        "label": "Button 3",
+        "index": 2
+      },
+      {
+        "id": "button-4-4",
+        "kind": "button",
+        "label": "Button 4",
+        "index": 3
+      },
+      {
+        "id": "button-5-5",
+        "kind": "button",
+        "label": "Button 5",
+        "index": 4
+      },
+      {
+        "id": "button-6-6",
+        "kind": "button",
+        "label": "Button 6",
+        "index": 5
+      },
+      {
+        "id": "button-7-7",
+        "kind": "button",
+        "label": "Button 7",
+        "index": 6
+      },
+      {
+        "id": "button-8-8",
+        "kind": "button",
+        "label": "Button 8",
+        "index": 7
+      },
+      {
+        "id": "button-9-9",
+        "kind": "button",
+        "label": "Button 9",
+        "index": 8
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "queue-2",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "help-4",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "logout-5",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 4
+      }
+    ]
+  },
+  {
+    "screenId": "674d0fc8865b47bc995e9182d4db1edc",
+    "title": "Settings and Preferences - FleetPulse Matrix V2R8",
+    "componentName": "SettingsAndPreferencesFleetpulseMatrixV2r8",
+    "file": "src/screens/SettingsAndPreferencesFleetpulseMatrixV2r8.tsx",
+    "buttons": 8,
+    "inputs": 2,
+    "links": 5,
+    "actions": [
+      {
+        "id": "create-task-1",
+        "kind": "button",
+        "label": "Create Task",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "button-3-3",
+        "kind": "button",
+        "label": "Button 3",
+        "index": 2
+      },
+      {
+        "id": "button-4-4",
+        "kind": "button",
+        "label": "Button 4",
+        "index": 3
+      },
+      {
+        "id": "button-5-5",
+        "kind": "button",
+        "label": "Button 5",
+        "index": 4
+      },
+      {
+        "id": "reset-to-defaults-6",
+        "kind": "button",
+        "label": "Reset to Defaults",
+        "index": 5
+      },
+      {
+        "id": "retry-load-7",
+        "kind": "button",
+        "label": "Retry Load",
+        "index": 6
+      },
+      {
+        "id": "save-preferences-8",
+        "kind": "button",
+        "label": "Save Preferences",
+        "index": 7
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "queue-2",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "help-4",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "logout-5",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 4
+      }
+    ]
+  },
+  {
+    "screenId": "20dcdbbc610a4ef8802a295e7336282d",
+    "title": "Empty and Error Recovery - FleetPulse Matrix V2R8",
+    "componentName": "EmptyAndErrorRecoveryFleetpulseMatrixV2r8",
+    "file": "src/screens/EmptyAndErrorRecoveryFleetpulseMatrixV2r8.tsx",
+    "buttons": 6,
+    "inputs": 1,
+    "links": 0,
+    "actions": [
+      {
+        "id": "create-task-1",
+        "kind": "button",
+        "label": "Create Task",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "retry-load-3",
+        "kind": "button",
+        "label": "Retry Load",
+        "index": 2
+      },
+      {
+        "id": "create-record-4",
+        "kind": "button",
+        "label": "Create Record",
+        "index": 3
+      },
+      {
+        "id": "clear-all-filters-5",
+        "kind": "button",
+        "label": "Clear All Filters",
+        "index": 4
+      },
+      {
+        "id": "technical-details-6",
+        "kind": "button",
+        "label": "Technical Details",
+        "index": 5
+      }
+    ]
+  }
+]
