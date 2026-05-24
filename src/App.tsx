@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useReducer } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, type MouseEvent } from 'react';
 import {
   EmptyAndErrorRecoveryFleetpulseMatrixV2r8,
   QueueAndStatusManagementFleetpulseMatrixV2r8,
@@ -18,6 +18,9 @@ import {
   getFleetPulseSnapshot,
   type FleetPulseRoute,
 } from './features/fleetpulse-matrix-v2r8/fleetpulse-matrix-v2r8.store';
+import { searchQueueRecords } from './features/surf-queue-and-status-management/act_search_records';
+import { selectQueueRecord } from './features/surf-queue-and-status-management/act_select_record';
+import { updateQueueRecordStatus } from './features/surf-queue-and-status-management/act_update_record_status';
 import { publishFleetPulseAppSnapshot } from './test/bridge';
 
 export default function App() {
@@ -50,8 +53,27 @@ export default function App() {
     publishFleetPulseAppSnapshot(snapshot);
   }, [snapshot]);
 
+  useEffect(() => {
+    const actionAnchors = document.querySelectorAll<HTMLAnchorElement>('a[data-action-id][href="#"]');
+    actionAnchors.forEach((anchor) => {
+      anchor.removeAttribute('href');
+      anchor.setAttribute('role', 'button');
+      anchor.tabIndex = 0;
+    });
+
+    if (snapshot.activeRoute === 'operations' && !document.querySelector('[data-action-id="queue-2"]')) {
+      document.querySelector('[data-action-id="button-8-8"]')?.setAttribute('data-action-id', 'queue-2');
+    }
+  }, [snapshot.activeRoute]);
+
   const navigate = useCallback((route: FleetPulseRoute) => {
     dispatch({ type: 'navigate', route });
+  }, []);
+  const suppressGeneratedActionAnchorNavigation = useCallback((event: MouseEvent<HTMLDivElement>) => {
+    const actionAnchor = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[data-action-id][href="#"]');
+    if (actionAnchor) {
+      event.preventDefault();
+    }
   }, []);
 
   const createRecord = useCallback(() => dispatch({ type: 'record:create' }), []);
@@ -96,10 +118,10 @@ export default function App() {
   const queueActions = useMemo<Partial<Record<QueueAndStatusManagementFleetpulseMatrixV2r8ActionId, () => void>>>(
     () => ({
       'create-task-1': createRecord,
-      'button-2-2': () => dispatch({ type: 'panel:set', panel: 'queue' }),
-      'button-3-3': () => dispatch({ type: 'select', recordId: state.records[0]?.id ?? null }),
-      'button-4-4': () => dispatch({ type: 'select', recordId: state.records[1]?.id ?? null }),
-      'button-5-5': () => dispatch({ type: 'select', recordId: state.records[2]?.id ?? null }),
+      'button-2-2': () => searchQueueRecords({ dispatch }),
+      'button-3-3': () => selectQueueRecord({ dispatch, records: state.records, index: 0 }),
+      'button-4-4': () => selectQueueRecord({ dispatch, records: state.records, index: 1 }),
+      'button-5-5': () => updateQueueRecordStatus({ dispatch, records: state.records, index: 2 }),
       'button-6-6': () => navigate('operations'),
       'button-7-7': () => navigate('editor'),
       'button-8-8': retryLoad,
@@ -165,6 +187,7 @@ export default function App() {
       data-active-route={snapshot.activeRoute}
       data-storage-status={snapshot.storageStatus}
       className="min-h-screen bg-slate-50 text-slate-950"
+      onClickCapture={suppressGeneratedActionAnchorNavigation}
     >
       {state.activeRoute === 'queue' ? <QueueAndStatusManagementFleetpulseMatrixV2r8 actions={queueActions} /> : null}
       {state.activeRoute === 'settings' ? <SettingsAndPreferencesFleetpulseMatrixV2r8 actions={settingsActions} /> : null}
