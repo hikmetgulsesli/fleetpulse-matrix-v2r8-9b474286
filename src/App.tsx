@@ -69,6 +69,11 @@ export default function App() {
   const navigate = useCallback((route: FleetPulseRoute) => {
     dispatch({ type: 'navigate', route });
   }, []);
+  const setBrowserFeedbackPath = useCallback((path: string) => {
+    if (typeof window !== 'undefined') {
+      window.history.pushState(null, '', path);
+    }
+  }, []);
   const suppressGeneratedActionAnchorNavigation = useCallback((event: MouseEvent<HTMLDivElement>) => {
     const actionAnchor = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[data-action-id][href="#"]');
     if (actionAnchor) {
@@ -118,9 +123,18 @@ export default function App() {
   const queueActions = useMemo<Partial<Record<QueueAndStatusManagementFleetpulseMatrixV2r8ActionId, () => void>>>(
     () => ({
       'create-task-1': createRecord,
-      'button-2-2': () => searchQueueRecords({ dispatch }),
-      'button-3-3': () => selectQueueRecord({ dispatch, records: state.records, index: 0 }),
-      'button-4-4': () => selectQueueRecord({ dispatch, records: state.records, index: 1 }),
+      'button-2-2': () => {
+        setBrowserFeedbackPath('/notifications');
+        searchQueueRecords({ dispatch });
+      },
+      'button-3-3': () => {
+        setBrowserFeedbackPath('/help');
+        selectQueueRecord({ dispatch, records: state.records, index: 0 });
+      },
+      'button-4-4': () => {
+        setBrowserFeedbackPath('/profile');
+        selectQueueRecord({ dispatch, records: state.records, index: 1 });
+      },
       'button-5-5': () => updateQueueRecordStatus({ dispatch, records: state.records, index: 2 }),
       'button-6-6': () => navigate('operations'),
       'button-7-7': () => navigate('editor'),
@@ -129,10 +143,13 @@ export default function App() {
       'operations-1': () => navigate('operations'),
       'queue-2': () => navigate('queue'),
       'settings-3': () => navigate('settings'),
-      'help-4': () => dispatch({ type: 'panel:set', panel: 'details' }),
+      'help-4': () => {
+        setBrowserFeedbackPath('/help');
+        dispatch({ type: 'panel:set', panel: 'details' });
+      },
       'logout-5': () => navigate('operations'),
     }),
-    [createRecord, navigate, retryLoad, state.records],
+    [createRecord, navigate, retryLoad, setBrowserFeedbackPath, state.records],
   );
 
   const settingsActions = useMemo<Partial<Record<SettingsAndPreferencesFleetpulseMatrixV2r8ActionId, () => void>>>(
