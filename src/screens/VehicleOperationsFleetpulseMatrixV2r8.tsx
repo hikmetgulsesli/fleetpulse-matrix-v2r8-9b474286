@@ -22,15 +22,15 @@ export function VehicleOperationsFleetpulseMatrixV2r8({ actions }: VehicleOperat
       {/* SideNavBar */}
       <nav className="hidden xl:flex flex-col h-full py-6 px-4 gap-stack-tight bg-surface-container-low dark:bg-surface-container-lowest fixed left-0 top-0 w-sidebar-width border-r border-outline-variant dark:border-outline z-40">
       <div className="mb-8 px-3">
-      <h1 className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FleetPulse Matrix</h1>
+      <button className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-left" type="button" disabled>FleetPulse Matrix</button>
       </div>
       <div className="flex items-center gap-3 px-3 mb-6">
-      <div className="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+      <button className="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold" type="button" disabled>
                       FM
-                  </div>
+                  </button>
       <div>
-      <div className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-sm">Fleet Manager</div>
-      <div className="font-body-sm text-body-sm text-on-surface-variant">Central Command</div>
+      <button className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-sm text-left" type="button" disabled>Fleet Manager</button>
+      <button className="font-body-sm text-body-sm text-on-surface-variant text-left" type="button" disabled>Central Command</button>
       </div>
       </div>
       <button className="w-full bg-primary text-on-primary py-2 px-4 rounded font-body-md text-body-md mb-6 hover:opacity-90 transition-opacity" type="button" data-action-id="create-task-1" onClick={actions?.["create-task-1"]}>
@@ -38,29 +38,29 @@ export function VehicleOperationsFleetpulseMatrixV2r8({ actions }: VehicleOperat
               </button>
       <div className="flex-1 flex flex-col gap-2">
       {/* Active Tab: Operations */}
-      <div className="flex items-center gap-3 bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-lg px-3 py-2 cursor-pointer active:scale-95 duration-150">
+      <button className="flex items-center gap-3 bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-lg px-3 py-2 cursor-pointer active:scale-95 duration-150" type="button" disabled>
       <Circle  style={{fontVariationSettings: "'FILL' 1"}} aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Operations</span>
-      </div>
+      </button>
       {/* Inactive Tabs */}
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      <button className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" type="button" disabled>
       <Circle aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Queue</span>
-      </div>
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      </button>
+      <button className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" type="button" disabled>
       <Settings aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Settings</span>
-      </div>
+      </button>
       </div>
       <div className="mt-auto flex flex-col gap-2 border-t border-outline-variant pt-4">
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      <button className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" type="button" disabled>
       <Circle aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Help</span>
-      </div>
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      </button>
+      <button className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" type="button" disabled>
       <Circle aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Logout</span>
-      </div>
+      </button>
       </div>
       </nav>
       {/* Main Content Wrapper */}
@@ -225,7 +225,7 @@ export function VehicleOperationsFleetpulseMatrixV2r8({ actions }: VehicleOperat
       <h3 className="font-headline-md text-headline-md text-on-surface">V-8829 Details</h3>
       <p className="font-body-sm text-body-sm text-on-surface-variant">Volvo FH16</p>
       </div>
-      <button className="text-on-surface-variant hover:bg-surface-container p-1 rounded transition-colors" type="button" data-action-id="button-11-11" onClick={actions?.["button-11-11"]}>
+      <button className="text-on-surface-variant hover:bg-surface-container p-1 rounded transition-colors" type="button" data-action-id="button-11-11" onClick={actions?.["button-11-11"]} aria-label="close">
       <X aria-hidden={true} focusable="false" />
       </button>
       </div>
