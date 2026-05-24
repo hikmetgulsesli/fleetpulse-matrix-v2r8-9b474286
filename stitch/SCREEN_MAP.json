@@ -1,0 +1,47 @@
+[
+  {
+    "screenId": "026c0fb28cff4dccad6ccf11bec47c83",
+    "name": "Vehicle Editor - FleetPulse Matrix V2R8",
+    "type": "form",
+    "description": "Vehicle Editor - FleetPulse Matrix V2R8 screen",
+    "surfaceIds": [
+      "SURF_VEHICLE_EDITOR"
+    ]
+  },
+  {
+    "screenId": "bc34c1a5c114407095b96e073e384606",
+    "name": "Vehicle Operations - FleetPulse Matrix V2R8",
+    "type": "app-screen",
+    "description": "Vehicle Operations - FleetPulse Matrix V2R8 screen",
+    "surfaceIds": [
+      "SURF_VEHICLE_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "0ed5add801c44a46a138b255b61c6702",
+    "name": "Queue and Status Management - FleetPulse Matrix V2R8",
+    "type": "app-screen",
+    "description": "Queue and Status Management - FleetPulse Matrix V2R8 screen",
+    "surfaceIds": [
+      "SURF_QUEUE_AND_STATUS_MANAGEMENT"
+    ]
+  },
+  {
+    "screenId": "674d0fc8865b47bc995e9182d4db1edc",
+    "name": "Settings and Preferences - FleetPulse Matrix V2R8",
+    "type": "settings",
+    "description": "Settings and Preferences - FleetPulse Matrix V2R8 screen",
+    "surfaceIds": [
+      "SURF_SETTINGS_AND_PREFERENCES"
+    ]
+  },
+  {
+    "screenId": "20dcdbbc610a4ef8802a295e7336282d",
+    "name": "Empty and Error Recovery - FleetPulse Matrix V2R8",
+    "type": "error",
+    "description": "Empty and Error Recovery - FleetPulse Matrix V2R8 screen",
+    "surfaceIds": [
+      "SURF_EMPTY_AND_ERROR_RECOVERY"
+    ]
+  }
+]

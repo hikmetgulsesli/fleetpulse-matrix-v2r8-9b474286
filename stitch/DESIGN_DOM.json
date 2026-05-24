@@ -1,0 +1,2686 @@
+{
+  "generatedAt": "2026-05-24T17:08:28.654Z",
+  "screenCount": 5,
+  "screens": {
+    "026c0fb28cff4dccad6ccf11bec47c83": {
+      "screenId": "026c0fb28cff4dccad6ccf11bec47c83",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-gutter",
+            "h-14",
+            "z-50",
+            "bg-surface",
+            "border-b"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-full",
+            "py-6",
+            "px-4",
+            "gap-stack-tight",
+            "bg-surface-container-low",
+            "border-r",
+            "border-outline-variant"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "md:ml-[240px]",
+            "flex",
+            "flex-col",
+            "h-[calc(100vh-3.5rem)]",
+            "md:h-screen",
+            "overflow-y-auto",
+            "bg-background"
+          ],
+          "childCount": 24
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "classes": [
+            "w-full",
+            "bg-primary",
+            "text-on-primary",
+            "py-2",
+            "px-4",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "mb-6",
+            "hover:bg-surface-tint",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel Edit",
+          "classes": [
+            "px-4",
+            "py-2",
+            "bg-surface",
+            "text-on-surface-variant",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-surface-container-highest",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Save Record",
+          "classes": [
+            "px-4",
+            "py-2",
+            "bg-primary",
+            "text-on-primary",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-surface-tint",
+            "transition-colors",
+            "shadow-sm"
+          ],
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix Fleet Manager",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Central Command",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "text",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-10",
+            "px-3",
+            "bg-error-container/20",
+            "border",
+            "border-error",
+            "text-on-surface",
+            "rounded",
+            "font-data-mono",
+            "text-data-mono",
+            "focus:outline-none",
+            "focus:ring-1",
+            "focus:ring-error",
+            "shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-10",
+            "px-3",
+            "appearance-none",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "number",
+          "label": "number",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-10",
+            "px-3",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded",
+            "font-data-mono",
+            "text-data-mono",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "date",
+          "label": "date",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-10",
+            "px-3",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded",
+            "font-data-mono",
+            "text-data-mono",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "pending_actions",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "arrow_back",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "arrow_back",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "notifications",
+        "help",
+        "account_circle",
+        "dashboard",
+        "pending_actions",
+        "settings",
+        "help_outline",
+        "logout",
+        "arrow_back",
+        "info",
+        "error",
+        "expand_more"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCKpQz-pGkWhDAmuGc_WjMxtfKd7A7ok0Ntc7mj7npAvfMWtyoY47ztRzj9NhfS6NE1PBmysbqj77eiddD_YPB17maru0EWNR8QoS56YHQ4diILvsZi6FmMU-nfwYKl6iDm68DflQXq9ir5g5Hrjr",
+          "alt": "Fleet Manager Avatar"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f2f0f2",
+        "error": "#ba1a1a",
+        "surface-tint": "#4f6073",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "inverse-primary": "#b7c8de",
+        "on-tertiary-fixed-variant": "#584326",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#281802",
+        "on-background": "#1b1c1d",
+        "surface-container-highest": "#e4e2e3",
+        "background": "#fbf9fa",
+        "primary-fixed-dim": "#b7c8de",
+        "surface-container-high": "#e9e7e9",
+        "secondary": "#505f76",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#38485a",
+        "on-surface-variant": "#44474c",
+        "on-secondary-fixed-variant": "#38485d",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed": "#feddb5",
+        "secondary-fixed": "#d3e4fe",
+        "inverse-surface": "#303032",
+        "on-surface": "#1b1c1d",
+        "tertiary-container": "#38260b",
+        "secondary-container": "#d0e1fb",
+        "surface": "#fbf9fa",
+        "tertiary-fixed-dim": "#e1c29b",
+        "surface-container-low": "#f5f3f4",
+        "on-secondary-fixed": "#0b1c30",
+        "primary-container": "#1a2b3c",
+        "primary-fixed": "#d2e4fb",
+        "outline-variant": "#c4c6cd",
+        "tertiary": "#211200",
+        "on-primary-container": "#8192a7",
+        "secondary-fixed-dim": "#b7c8e1",
+        "primary": "#041627",
+        "surface-bright": "#fbf9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e4e2e3",
+        "on-error-container": "#93000a",
+        "outline": "#74777d",
+        "surface-dim": "#dbd9db",
+        "on-tertiary-container": "#a88c69",
+        "surface-container": "#efedef",
+        "on-error": "#ffffff",
+        "on-primary-fixed": "#0b1d2d"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "arrow_back",
+          "icon": "arrow_back",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel Edit",
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Save Record",
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix Fleet Manager",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Central Command",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "text",
+          "type": "text",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "number",
+          "type": "number",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "date",
+          "type": "date",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix Fleet Manager",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Central Command",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Vehicle Editor - FleetPulse Matrix V2R8"
+    },
+    "0ed5add801c44a46a138b255b61c6702": {
+      "screenId": "0ed5add801c44a46a138b255b61c6702",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-sidebar-width",
+            "border-r",
+            "border-outline-variant",
+            "dark:border-outline"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "ml-[240px]",
+            "flex-1",
+            "flex",
+            "flex-col",
+            "h-full",
+            "bg-background",
+            "relative",
+            "z-0"
+          ],
+          "childCount": 54
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "classes": [
+            "w-full",
+            "bg-primary",
+            "text-on-primary",
+            "py-2",
+            "px-4",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "mb-4",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "cursor-pointer",
+            "active:opacity-80",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "help",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "cursor-pointer",
+            "active:opacity-80",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/help",
+          "expectedRoute": "/help",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "account_circle",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "cursor-pointer",
+            "active:opacity-80",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "account_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_horiz",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "more_horiz",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "person",
+          "classes": [],
+          "icon": "person",
+          "action": "navigate",
+          "expectedRoute": "/profile",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/profile"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Avatar",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search tasks, vehicles...",
+          "placeholder": "Search tasks, vehicles...",
+          "name": "",
+          "classes": [
+            "pl-8",
+            "pr-4",
+            "py-1.5",
+            "bg-surface-container",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "text-body-sm",
+            "font-body-sm",
+            "w-64",
+            "outline-none",
+            "transition-all"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "pending_actions",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "pending_actions",
+        "settings",
+        "help_outline",
+        "logout",
+        "person",
+        "search",
+        "notifications",
+        "help",
+        "account_circle",
+        "more_horiz",
+        "warning",
+        "check_circle",
+        "task_alt"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f2f0f2",
+        "error": "#ba1a1a",
+        "surface-tint": "#4f6073",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "inverse-primary": "#b7c8de",
+        "on-tertiary-fixed-variant": "#584326",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#281802",
+        "on-background": "#1b1c1d",
+        "surface-container-highest": "#e4e2e3",
+        "background": "#fbf9fa",
+        "primary-fixed-dim": "#b7c8de",
+        "surface-container-high": "#e9e7e9",
+        "secondary": "#505f76",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#38485a",
+        "on-surface-variant": "#44474c",
+        "on-secondary-fixed-variant": "#38485d",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed": "#feddb5",
+        "secondary-fixed": "#d3e4fe",
+        "inverse-surface": "#303032",
+        "on-surface": "#1b1c1d",
+        "tertiary-container": "#38260b",
+        "secondary-container": "#d0e1fb",
+        "surface": "#fbf9fa",
+        "tertiary-fixed-dim": "#e1c29b",
+        "surface-container-low": "#f5f3f4",
+        "on-secondary-fixed": "#0b1c30",
+        "primary-container": "#1a2b3c",
+        "primary-fixed": "#d2e4fb",
+        "outline-variant": "#c4c6cd",
+        "tertiary": "#211200",
+        "on-primary-container": "#8192a7",
+        "secondary-fixed-dim": "#b7c8e1",
+        "primary": "#041627",
+        "surface-bright": "#fbf9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e4e2e3",
+        "on-error-container": "#93000a",
+        "outline": "#74777d",
+        "surface-dim": "#dbd9db",
+        "on-tertiary-container": "#a88c69",
+        "surface-container": "#efedef",
+        "on-error": "#ffffff",
+        "on-primary-fixed": "#0b1d2d"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "1"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "help",
+          "icon": "help",
+          "action": "navigate",
+          "route": "/help",
+          "expectedBehavior": "navigate:/help"
+        },
+        {
+          "kind": "button",
+          "label": "account_circle",
+          "icon": "account_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_horiz",
+          "icon": "more_horiz",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "person",
+          "icon": "person",
+          "action": "navigate",
+          "route": "/profile",
+          "expectedBehavior": "navigate:/profile"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Avatar",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search tasks, vehicles...",
+          "type": "text",
+          "placeholder": "Search tasks, vehicles...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "person",
+          "icon": "person",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Avatar",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Queue and Status Management - FleetPulse Matrix V2R8"
+    },
+    "20dcdbbc610a4ef8802a295e7336282d": {
+      "screenId": "20dcdbbc610a4ef8802a295e7336282d",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "border-b",
+            "border-outline-variant",
+            "dark:border-outline",
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-full",
+            "py-6",
+            "px-4",
+            "gap-stack-tight",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest",
+            "border-r"
+          ],
+          "childCount": 11
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "md:ml-sidebar-width",
+            "h-screen",
+            "bg-surface-container-low",
+            "overflow-hidden"
+          ],
+          "childCount": 16
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "font-label-caps",
+            "text-label-caps",
+            "py-3",
+            "px-4",
+            "rounded",
+            "w-full",
+            "flex",
+            "justify-center",
+            "items-center",
+            "gap-2",
+            "mb-6",
+            "hover:bg-primary/90",
+            "transition-colors"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "hover:bg-surface-container-highest",
+            "rounded-full",
+            "transition-colors"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "font-label-caps",
+            "text-label-caps",
+            "px-6",
+            "py-3",
+            "rounded",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2"
+          ],
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "classes": [
+            "bg-surface",
+            "text-secondary",
+            "font-label-caps",
+            "text-label-caps",
+            "border",
+            "border-outline",
+            "px-6",
+            "py-3",
+            "rounded",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2"
+          ],
+          "icon": "add_circle",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Clear All Filters",
+          "classes": [
+            "text-primary",
+            "font-body-sm",
+            "text-body-sm",
+            "hover:underline",
+            "mb-8",
+            "flex",
+            "items-center",
+            "gap-1"
+          ],
+          "icon": "filter_alt_off",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Technical Details",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "p-3",
+            "bg-surface-container-low",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "text-on-surface-variant",
+            "font-label-caps",
+            "text-label-caps",
+            "border-b",
+            "border-outline-variant"
+          ],
+          "icon": "terminal",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Operations",
+          "classes": [],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedRoute": "/",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/"
+        },
+        {
+          "kind": "button",
+          "label": "Queue",
+          "classes": [],
+          "icon": "pending_actions",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedRoute": "/settings",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "classes": [],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "logout",
+          "classes": [],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedRoute": "/logout",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/logout"
+        },
+        {
+          "kind": "button",
+          "label": "FM",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Active Search: Region West, Status: Idle",
+          "placeholder": "Active Search: Region West, Status: Idle",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "outline-none",
+            "text-body-sm",
+            "w-64",
+            "text-on-surface",
+            "placeholder:text-on-surface-variant"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "search",
+        "menu",
+        "dashboard",
+        "pending_actions",
+        "settings",
+        "add",
+        "help_outline",
+        "logout",
+        "notifications",
+        "manage_search",
+        "close",
+        "refresh",
+        "add_circle",
+        "filter_alt_off",
+        "terminal",
+        "expand_more"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f2f0f2",
+        "error": "#ba1a1a",
+        "surface-tint": "#4f6073",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "inverse-primary": "#b7c8de",
+        "on-tertiary-fixed-variant": "#584326",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#281802",
+        "on-background": "#1b1c1d",
+        "surface-container-highest": "#e4e2e3",
+        "background": "#fbf9fa",
+        "primary-fixed-dim": "#b7c8de",
+        "surface-container-high": "#e9e7e9",
+        "secondary": "#505f76",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#38485a",
+        "on-surface-variant": "#44474c",
+        "on-secondary-fixed-variant": "#38485d",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed": "#feddb5",
+        "secondary-fixed": "#d3e4fe",
+        "inverse-surface": "#303032",
+        "on-surface": "#1b1c1d",
+        "tertiary-container": "#38260b",
+        "secondary-container": "#d0e1fb",
+        "surface": "#fbf9fa",
+        "tertiary-fixed-dim": "#e1c29b",
+        "surface-container-low": "#f5f3f4",
+        "on-secondary-fixed": "#0b1c30",
+        "primary-container": "#1a2b3c",
+        "primary-fixed": "#d2e4fb",
+        "outline-variant": "#c4c6cd",
+        "tertiary": "#211200",
+        "on-primary-container": "#8192a7",
+        "secondary-fixed-dim": "#b7c8e1",
+        "primary": "#041627",
+        "surface-bright": "#fbf9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e4e2e3",
+        "on-error-container": "#93000a",
+        "outline": "#74777d",
+        "surface-dim": "#dbd9db",
+        "on-tertiary-container": "#a88c69",
+        "surface-container": "#efedef",
+        "on-error": "#ffffff",
+        "on-primary-fixed": "#0b1d2d"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": "add_circle",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Clear All Filters",
+          "icon": "filter_alt_off",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Technical Details",
+          "icon": "terminal",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Operations",
+          "icon": "dashboard",
+          "action": "navigate",
+          "route": "/",
+          "expectedBehavior": "navigate:/"
+        },
+        {
+          "kind": "button",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "logout",
+          "icon": "logout",
+          "action": "navigate",
+          "route": "/logout",
+          "expectedBehavior": "navigate:/logout"
+        },
+        {
+          "kind": "button",
+          "label": "FM",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Active Search: Region West, Status: Idle",
+          "type": "text",
+          "placeholder": "Active Search: Region West, Status: Idle",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Operations",
+          "icon": "dashboard",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": "add",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "icon": "help_outline",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "logout",
+          "icon": "logout",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "FM",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Empty and Error Recovery - FleetPulse Matrix V2R8"
+    },
+    "674d0fc8865b47bc995e9182d4db1edc": {
+      "screenId": "674d0fc8865b47bc995e9182d4db1edc",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-full",
+            "py-6",
+            "px-4",
+            "gap-stack-tight",
+            "fixed",
+            "left-0",
+            "top-0"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "md:ml-[240px]",
+            "p-container-padding",
+            "lg:p-8",
+            "overflow-y-auto"
+          ],
+          "childCount": 23
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "classes": [
+            "w-full",
+            "flex",
+            "justify-center",
+            "items-center",
+            "gap-2",
+            "bg-primary",
+            "text-on-primary",
+            "py-2",
+            "px-4",
+            "rounded",
+            "font-headline-md",
+            "text-headline-md",
+            "hover:bg-surface-tint",
+            "transition-colors"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Rename",
+          "classes": [
+            "text-secondary",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Delete",
+          "classes": [
+            "text-error",
+            "hover:text-error-container",
+            "transition-colors"
+          ],
+          "icon": "delete",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "Reset to Defaults",
+          "classes": [
+            "text-error",
+            "hover:text-error-container",
+            "font-headline-md",
+            "text-headline-md",
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-4",
+            "py-2",
+            "transition-colors"
+          ],
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "classes": [
+            "px-4",
+            "py-2",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded",
+            "font-headline-md",
+            "text-headline-md",
+            "hover:bg-surface-container-low",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Save Preferences",
+          "classes": [
+            "px-6",
+            "py-2",
+            "bg-primary",
+            "text-on-primary",
+            "rounded",
+            "font-headline-md",
+            "text-headline-md",
+            "hover:bg-surface-tint",
+            "transition-colors",
+            "shadow-sm"
+          ],
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "border-outline-variant",
+            "rounded",
+            "bg-surface",
+            "text-body-md",
+            "font-body-md",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "h-10",
+            "px-3"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "mt-1",
+            "border-outline-variant",
+            "text-primary",
+            "focus:ring-primary",
+            "rounded"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "pending_actions",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "add",
+        "dashboard",
+        "pending_actions",
+        "settings",
+        "help_outline",
+        "logout",
+        "tune",
+        "filter_list",
+        "edit",
+        "delete",
+        "notifications",
+        "restart_alt"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAztWg8LeSdTauJ4X43HTw6nSdifGtDGwffS78IrovFEsdWxLDQj5HCqqfdab28bcF42tmqDITb97iOExMcG8p5AdySnRqm0kPY4TnUAPC_JWgPsl6SjkdcFZ-RQlCjMSYnWfPFNCUrQ-LDPM-OEI",
+          "alt": "Fleet Manager Avatar"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f2f0f2",
+        "error": "#ba1a1a",
+        "surface-tint": "#4f6073",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "inverse-primary": "#b7c8de",
+        "on-tertiary-fixed-variant": "#584326",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#281802",
+        "on-background": "#1b1c1d",
+        "surface-container-highest": "#e4e2e3",
+        "background": "#fbf9fa",
+        "primary-fixed-dim": "#b7c8de",
+        "surface-container-high": "#e9e7e9",
+        "secondary": "#505f76",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#38485a",
+        "on-surface-variant": "#44474c",
+        "on-secondary-fixed-variant": "#38485d",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed": "#feddb5",
+        "secondary-fixed": "#d3e4fe",
+        "inverse-surface": "#303032",
+        "on-surface": "#1b1c1d",
+        "tertiary-container": "#38260b",
+        "secondary-container": "#d0e1fb",
+        "surface": "#fbf9fa",
+        "tertiary-fixed-dim": "#e1c29b",
+        "surface-container-low": "#f5f3f4",
+        "on-secondary-fixed": "#0b1c30",
+        "primary-container": "#1a2b3c",
+        "primary-fixed": "#d2e4fb",
+        "outline-variant": "#c4c6cd",
+        "tertiary": "#211200",
+        "on-primary-container": "#8192a7",
+        "secondary-fixed-dim": "#b7c8e1",
+        "primary": "#041627",
+        "surface-bright": "#fbf9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e4e2e3",
+        "on-error-container": "#93000a",
+        "outline": "#74777d",
+        "surface-dim": "#dbd9db",
+        "on-tertiary-container": "#a88c69",
+        "surface-container": "#efedef",
+        "on-error": "#ffffff",
+        "on-primary-fixed": "#0b1d2d"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Rename",
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Delete",
+          "icon": "delete",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "Reset to Defaults",
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Save Preferences",
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Fleet Manager Central Command",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": "add",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Settings and Preferences - FleetPulse Matrix V2R8"
+    },
+    "bc34c1a5c114407095b96e073e384606": {
+      "screenId": "bc34c1a5c114407095b96e073e384606",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "xl:flex",
+            "flex-col",
+            "h-full",
+            "py-6",
+            "px-4",
+            "gap-stack-tight",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest",
+            "fixed"
+          ],
+          "childCount": 13
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-gutter",
+            "h-14",
+            "z-50",
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "border-b"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "overflow-y-auto",
+            "p-container-padding",
+            "flex",
+            "gap-6",
+            "bg-background",
+            "relative"
+          ],
+          "childCount": 32
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "classes": [
+            "w-full",
+            "bg-primary",
+            "text-on-primary",
+            "py-2",
+            "px-4",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "mb-6",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "classes": [
+            "bg-surface",
+            "text-secondary",
+            "border",
+            "border-outline-variant",
+            "py-1.5",
+            "px-4",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "hover:bg-surface-container-low",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "py-1.5",
+            "px-4",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "hover:opacity-90",
+            "transition-opacity",
+            "shadow-sm",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Status",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-1",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-3",
+            "py-1",
+            "text-body-sm",
+            "font-body-sm",
+            "hover:bg-surface-container-low"
+          ],
+          "icon": "arrow_drop_down",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Priority",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-1",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-3",
+            "py-1",
+            "text-body-sm",
+            "font-body-sm",
+            "hover:bg-surface-container-low"
+          ],
+          "icon": "arrow_drop_down",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "p-1",
+            "rounded",
+            "hover:bg-surface-container"
+          ],
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:bg-surface-container",
+            "p-1",
+            "rounded",
+            "transition-colors"
+          ],
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Log Event",
+          "classes": [
+            "flex-1",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-secondary",
+            "py-1.5",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "hover:bg-surface-container-low",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Full",
+          "classes": [
+            "flex-1",
+            "bg-primary",
+            "text-on-primary",
+            "py-1.5",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FM",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Central Command",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Operations",
+          "classes": [],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedRoute": "/",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/"
+        },
+        {
+          "kind": "button",
+          "label": "Queue",
+          "classes": [],
+          "icon": "pending_actions",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedRoute": "/settings",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "classes": [],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "logout",
+          "classes": [],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedRoute": "/logout",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/logout"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search Matrix...",
+          "placeholder": "Search Matrix...",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "p-0",
+            "focus:ring-0",
+            "text-body-md",
+            "font-body-md",
+            "text-on-surface",
+            "w-full",
+            "placeholder:text-on-surface-variant",
+            "outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Filter vehicles by ID or Model...",
+          "placeholder": "Filter vehicles by ID or Model...",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "p-0",
+            "focus:ring-0",
+            "text-body-md",
+            "font-body-md",
+            "text-on-surface",
+            "w-full",
+            "outline-none",
+            "text-sm"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "pending_actions",
+        "settings",
+        "help_outline",
+        "logout",
+        "menu",
+        "search",
+        "notifications",
+        "help",
+        "account_circle",
+        "add",
+        "arrow_drop_down",
+        "more_vert",
+        "close"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f2f0f2",
+        "error": "#ba1a1a",
+        "surface-tint": "#4f6073",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "inverse-primary": "#b7c8de",
+        "on-tertiary-fixed-variant": "#584326",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#281802",
+        "on-background": "#1b1c1d",
+        "surface-container-highest": "#e4e2e3",
+        "background": "#fbf9fa",
+        "primary-fixed-dim": "#b7c8de",
+        "surface-container-high": "#e9e7e9",
+        "secondary": "#505f76",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#38485a",
+        "on-surface-variant": "#44474c",
+        "on-secondary-fixed-variant": "#38485d",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed": "#feddb5",
+        "secondary-fixed": "#d3e4fe",
+        "inverse-surface": "#303032",
+        "on-surface": "#1b1c1d",
+        "tertiary-container": "#38260b",
+        "secondary-container": "#d0e1fb",
+        "surface": "#fbf9fa",
+        "tertiary-fixed-dim": "#e1c29b",
+        "surface-container-low": "#f5f3f4",
+        "on-secondary-fixed": "#0b1c30",
+        "primary-container": "#1a2b3c",
+        "primary-fixed": "#d2e4fb",
+        "outline-variant": "#c4c6cd",
+        "tertiary": "#211200",
+        "on-primary-container": "#8192a7",
+        "secondary-fixed-dim": "#b7c8e1",
+        "primary": "#041627",
+        "surface-bright": "#fbf9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e4e2e3",
+        "on-error-container": "#93000a",
+        "outline": "#74777d",
+        "surface-dim": "#dbd9db",
+        "on-tertiary-container": "#a88c69",
+        "surface-container": "#efedef",
+        "on-error": "#ffffff",
+        "on-primary-fixed": "#0b1d2d"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 2,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Status",
+          "icon": "arrow_drop_down",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Priority",
+          "icon": "arrow_drop_down",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Log Event",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Full",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FM",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Central Command",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Operations",
+          "icon": "dashboard",
+          "action": "navigate",
+          "route": "/",
+          "expectedBehavior": "navigate:/"
+        },
+        {
+          "kind": "button",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "logout",
+          "icon": "logout",
+          "action": "navigate",
+          "route": "/logout",
+          "expectedBehavior": "navigate:/logout"
+        },
+        {
+          "kind": "input",
+          "label": "Search Matrix...",
+          "type": "text",
+          "placeholder": "Search Matrix...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "Filter vehicles by ID or Model...",
+          "type": "text",
+          "placeholder": "Filter vehicles by ID or Model...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FleetPulse Matrix",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "FM",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Fleet Manager",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Central Command",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Operations",
+          "icon": "dashboard",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Queue",
+          "icon": "pending_actions",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "icon": "help_outline",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "logout",
+          "icon": "logout",
+          "active": true
+        }
+      ],
+      "title": "Vehicle Operations - FleetPulse Matrix V2R8"
+    }
+  }
+}

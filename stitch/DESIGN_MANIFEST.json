@@ -1,0 +1,57 @@
+[
+  {
+    "screenId": "026c0fb28cff4dccad6ccf11bec47c83",
+    "title": "Vehicle Editor - FleetPulse Matrix V2R8",
+    "htmlFile": "026c0fb28cff4dccad6ccf11bec47c83.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzMxNTc0ZjI2ZDI2OTRmZTg4ZjA4ZDM0NzBhY2IwNTVlEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM5NDA5MTA5MTI2NzIyMDc1NDky&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/fleetpulse-matrix-v2r8-9b474286/stitch/026c0fb28cff4dccad6ccf11bec47c83.html",
+    "surfaceIds": [
+      "SURF_VEHICLE_EDITOR"
+    ]
+  },
+  {
+    "screenId": "bc34c1a5c114407095b96e073e384606",
+    "title": "Vehicle Operations - FleetPulse Matrix V2R8",
+    "htmlFile": "bc34c1a5c114407095b96e073e384606.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzI1Y2VkMGFjYzhmYTQ3OGRhMTliYTcwMGVjOGNkMzM2EgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM5NDA5MTA5MTI2NzIyMDc1NDky&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/fleetpulse-matrix-v2r8-9b474286/stitch/bc34c1a5c114407095b96e073e384606.html",
+    "surfaceIds": [
+      "SURF_VEHICLE_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "0ed5add801c44a46a138b255b61c6702",
+    "title": "Queue and Status Management - FleetPulse Matrix V2R8",
+    "htmlFile": "0ed5add801c44a46a138b255b61c6702.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzYzZTJmNDI2MDU4ZTQ3ZTFhMDRjMmZlNDFhM2MyN2ExEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM5NDA5MTA5MTI2NzIyMDc1NDky&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/fleetpulse-matrix-v2r8-9b474286/stitch/0ed5add801c44a46a138b255b61c6702.html",
+    "surfaceIds": [
+      "SURF_QUEUE_AND_STATUS_MANAGEMENT"
+    ]
+  },
+  {
+    "screenId": "674d0fc8865b47bc995e9182d4db1edc",
+    "title": "Settings and Preferences - FleetPulse Matrix V2R8",
+    "htmlFile": "674d0fc8865b47bc995e9182d4db1edc.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzM0ZGZjMzA3OTMyMjQ4MzI5ZjY5YzhlMDQ5ZmZlNTVmEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM5NDA5MTA5MTI2NzIyMDc1NDky&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/fleetpulse-matrix-v2r8-9b474286/stitch/674d0fc8865b47bc995e9182d4db1edc.html",
+    "surfaceIds": [
+      "SURF_SETTINGS_AND_PREFERENCES"
+    ]
+  },
+  {
+    "screenId": "20dcdbbc610a4ef8802a295e7336282d",
+    "title": "Empty and Error Recovery - FleetPulse Matrix V2R8",
+    "htmlFile": "20dcdbbc610a4ef8802a295e7336282d.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzdhMTNhZTU1MzY1NjRlNjlhOTNhMWUzOTExZTE0ODhiEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM5NDA5MTA5MTI2NzIyMDc1NDky&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/fleetpulse-matrix-v2r8-9b474286/stitch/20dcdbbc610a4ef8802a295e7336282d.html",
+    "surfaceIds": [
+      "SURF_EMPTY_AND_ERROR_RECOVERY"
+    ]
+  }
+]

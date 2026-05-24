@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vehicle Editor - FleetPulse Matrix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f0f2",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4f6073",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "inverse-primary": "#b7c8de",
+                        "on-tertiary-fixed-variant": "#584326",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#281802",
+                        "on-background": "#1b1c1d",
+                        "surface-container-highest": "#e4e2e3",
+                        "background": "#fbf9fa",
+                        "primary-fixed-dim": "#b7c8de",
+                        "surface-container-high": "#e9e7e9",
+                        "secondary": "#505f76",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#38485a",
+                        "on-surface-variant": "#44474c",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#feddb5",
+                        "secondary-fixed": "#d3e4fe",
+                        "inverse-surface": "#303032",
+                        "on-surface": "#1b1c1d",
+                        "tertiary-container": "#38260b",
+                        "secondary-container": "#d0e1fb",
+                        "surface": "#fbf9fa",
+                        "tertiary-fixed-dim": "#e1c29b",
+                        "surface-container-low": "#f5f3f4",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-container": "#1a2b3c",
+                        "primary-fixed": "#d2e4fb",
+                        "outline-variant": "#c4c6cd",
+                        "tertiary": "#211200",
+                        "on-primary-container": "#8192a7",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "primary": "#041627",
+                        "surface-bright": "#fbf9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e4e2e3",
+                        "on-error-container": "#93000a",
+                        "outline": "#74777d",
+                        "surface-dim": "#dbd9db",
+                        "on-tertiary-container": "#a88c69",
+                        "surface-container": "#efedef",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#0b1d2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-dense": "0.25rem",
+                        "sidebar-width": "240px",
+                        "container-padding": "1.5rem",
+                        "stack-tight": "0.5rem",
+                        "unit": "4px",
+                        "gutter": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-sm": ["Hanken Grotesk", "sans-serif"],
+                        "headline-md": ["Hanken Grotesk", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "data-mono": ["JetBrains Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "data-mono": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-full bg-background text-on-background flex flex-col md:flex-row overflow-hidden font-body-md text-body-md">
+<!-- TopNavBar (Mobile Only) -->
+<header class="md:hidden flex justify-between items-center w-full px-gutter h-14 z-50 bg-surface border-b border-outline-variant">
+<div class="font-display-sm text-display-sm text-primary">FleetPulse Matrix</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80">help</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-80">account_circle</span>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<nav class="hidden md:flex flex-col h-full py-6 px-4 gap-stack-tight bg-surface-container-low border-r border-outline-variant fixed left-0 top-0 h-full w-sidebar-width z-50">
+<div class="mb-8">
+<h1 class="font-headline-md text-headline-md font-bold text-primary mb-6">FleetPulse Matrix</h1>
+<div class="flex items-center gap-3">
+<img alt="Fleet Manager Avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKpQz-pGkWhDAmuGc_WjMxtfKd7A7ok0Ntc7mj7npAvfMWtyoY47ztRzj9NhfS6NE1PBmysbqj77eiddD_YPB17maru0EWNR8QoS56YHQ4diILvsZi6FmMU-nfwYKl6iDm68DflQXq9ir5g5HrjrkB6rgkkQL7xOGmXJJ8lkvkZZ5Pu7lKl9pIbIEsaXasT2V_MrLNscsYJ_rwcBS97t8qPuSKcgRU0lt0B2wW_-N4gPl1hlb4adlAw78krB7KRK6Kz_jzo26rbUk"/>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Fleet Manager</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Central Command</div>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-2 px-4 rounded font-label-caps text-label-caps mb-6 hover:bg-surface-tint transition-colors">Create Task</button>
+<div class="flex flex-col gap-2 flex-grow">
+<!-- Active Tab -->
+<a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-lg px-3 py-2 font-label-caps text-label-caps cursor-pointer active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Operations
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-highest transition-all cursor-pointer active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">pending_actions</span>
+                Queue
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-highest transition-all cursor-pointer active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+<div class="flex flex-col gap-2 mt-auto pt-4 border-t border-outline-variant">
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-highest transition-all cursor-pointer active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+                Help
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-highest transition-all cursor-pointer active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-[240px] flex flex-col h-[calc(100vh-3.5rem)] md:h-screen overflow-y-auto bg-background">
+<!-- Header -->
+<div class="px-container-padding py-6 border-b border-surface-variant bg-surface sticky top-0 z-10">
+<div class="flex justify-between items-end">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</a>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Operations / Vehicles</span>
+</div>
+<h2 class="font-display-sm text-display-sm text-primary flex items-center gap-3">
+                        Edit Vehicle: V-8472
+                        <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim" title="Unsaved changes"></span>
+</h2>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-surface text-on-surface-variant border border-outline-variant rounded font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors">
+                        Cancel Edit
+                    </button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded font-label-caps text-label-caps hover:bg-surface-tint transition-colors shadow-sm">
+                        Save Record
+                    </button>
+</div>
+</div>
+<!-- Feedback Banner -->
+<div class="mt-4 flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-2 rounded font-body-sm text-body-sm shadow-[0_4px_12px_rgba(26,43,60,0.08)]">
+<span class="material-symbols-outlined text-[16px]">info</span>
+                Changes not yet saved. Proceed with caution.
+            </div>
+</div>
+<!-- Form Workspace -->
+<div class="p-container-padding">
+<div class="max-w-5xl mx-auto bg-surface border border-surface-variant rounded-xl shadow-[0_4px_12px_rgba(26,43,60,0.08)] p-6">
+<form class="space-y-8">
+<!-- Section: Identification -->
+<section>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 pb-2 border-b border-surface-variant">Identification</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-4">
+<!-- VIN (Error State) -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    VIN <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-error-container/20 border border-error text-on-surface rounded font-data-mono text-data-mono focus:outline-none focus:ring-1 focus:ring-error shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]" type="text" value="1FMCU0GZX"/>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                                    Invalid VIN format. Must be 17 characters.
+                                </span>
+</div>
+<!-- License -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    License Plate
+                                </label>
+<input class="w-full h-10 px-3 bg-surface border border-outline-variant text-on-surface rounded font-data-mono text-data-mono focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] transition-colors" type="text" value="XYZ-9876"/>
+</div>
+<!-- Type -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    Vehicle Type <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 appearance-none bg-surface border border-outline-variant text-on-surface rounded font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] transition-colors">
+<option>Heavy Duty Truck</option>
+<option selected="">Light Delivery Van</option>
+<option>Utility Vehicle</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Maintenance Cycle -->
+<section>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 pb-2 border-b border-surface-variant">Maintenance Cycle</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-4">
+<!-- Interval -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    Service Interval (Miles) <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface border border-outline-variant text-on-surface rounded font-data-mono text-data-mono focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] transition-colors" type="number" value="10000"/>
+</div>
+<!-- Last Service -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    Last Service Date
+                                </label>
+<input class="w-full h-10 px-3 bg-surface border border-outline-variant text-on-surface rounded font-data-mono text-data-mono focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] transition-colors" type="date" value="2023-10-15"/>
+</div>
+</div>
+</section>
+<!-- Section: Assignment -->
+<section>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 pb-2 border-b border-surface-variant">Assignment</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-4">
+<!-- Primary Tech -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    Primary Technician
+                                </label>
+<div class="relative">
+<select class="w-full h-10 px-3 appearance-none bg-surface border border-outline-variant text-on-surface rounded font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] transition-colors">
+<option>Unassigned</option>
+<option selected="">Sarah Jenkins</option>
+<option>Marcus Cole</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Location -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                                    Current Location Base <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 appearance-none bg-surface border border-outline-variant text-on-surface rounded font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)] transition-colors">
+<option>North Hub</option>
+<option selected="">South Depot</option>
+<option>East Terminal</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+</form>
+</div>
+</div>
+</main>
+</body></html>
