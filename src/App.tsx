@@ -62,6 +62,18 @@ export default function App() {
     });
     navigate('operations');
   }, [navigate]);
+  const clearPersistedData = useCallback(() => {
+    fleetPulseMatrixRepository.clear();
+    const result = fleetPulseMatrixRepository.load();
+    dispatch({
+      type: 'bootstrap:success',
+      records: result.state.records,
+      preferences: result.state.preferences,
+      recovered: false,
+      error: null,
+    });
+    navigate('operations');
+  }, [navigate]);
   const resetPreferences = useCallback(() => dispatch({ type: 'preferences:reset' }), []);
   const savePreferences = useCallback(() => {
     dispatch({ type: 'preferences:save', preferences: { activePanel: state.activePanel } });
@@ -146,10 +158,10 @@ export default function App() {
       'button-2-2': retryLoad,
       'retry-load-3': retryLoad,
       'create-record-4': createRecord,
-      'clear-all-filters-5': () => dispatch({ type: 'error:set', error: null }),
+      'clear-all-filters-5': clearPersistedData,
       'technical-details-6': () => dispatch({ type: 'panel:set', panel: 'details' }),
     }),
-    [createRecord, retryLoad],
+    [clearPersistedData, createRecord, retryLoad],
   );
 
   return (
