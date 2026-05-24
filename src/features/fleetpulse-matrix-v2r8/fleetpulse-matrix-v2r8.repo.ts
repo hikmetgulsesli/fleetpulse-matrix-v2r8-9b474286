@@ -31,7 +31,7 @@ export const fleetPulseMatrixRepository = {
     }
 
     try {
-      const parsed = JSON.parse(raw) as Partial<FleetPulsePersistedState>;
+      const parsed = JSON.parse(raw) as unknown;
       return { state: normalizePersistedState(parsed), status: 'ready', error: null };
     } catch {
       storage.removeItem(STORAGE_KEY);
@@ -62,11 +62,16 @@ export function createFallbackState(): FleetPulsePersistedState {
   };
 }
 
-function normalizePersistedState(candidate: Partial<FleetPulsePersistedState>): FleetPulsePersistedState {
+function normalizePersistedState(candidate: unknown): FleetPulsePersistedState {
+  const persisted = isPersistedStateCandidate(candidate) ? candidate : {};
   return {
-    records: Array.isArray(candidate.records) && candidate.records.length ? candidate.records : fleetPulseVehicleRecords,
-    preferences: { ...fleetPulseDefaultPreferences, ...candidate.preferences },
+    records: Array.isArray(persisted.records) ? persisted.records : fleetPulseVehicleRecords,
+    preferences: { ...fleetPulseDefaultPreferences, ...persisted.preferences },
   };
+}
+
+function isPersistedStateCandidate(candidate: unknown): candidate is Partial<FleetPulsePersistedState> {
+  return typeof candidate === 'object' && candidate !== null;
 }
 
 function getBrowserStorage(): Storage | null {

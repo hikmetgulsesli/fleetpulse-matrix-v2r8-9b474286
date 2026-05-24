@@ -24,17 +24,21 @@ export default function App() {
   const [state, dispatch] = useReducer(fleetPulseMatrixReducer, undefined, createFleetPulseInitialState);
   const snapshot = useMemo(() => getFleetPulseSnapshot(state), [state]);
 
-  useEffect(() => {
-    dispatch({ type: 'bootstrap:start' });
+  const dispatchRepositoryState = useCallback((recoveredOverride?: boolean) => {
     const result = fleetPulseMatrixRepository.load();
     dispatch({
       type: 'bootstrap:success',
       records: result.state.records,
       preferences: result.state.preferences,
-      recovered: result.status === 'recovered',
-      error: result.error,
+      recovered: recoveredOverride ?? result.status === 'recovered',
+      error: recoveredOverride === false ? null : result.error,
     });
   }, []);
+
+  useEffect(() => {
+    dispatch({ type: 'bootstrap:start' });
+    dispatchRepositoryState();
+  }, [dispatchRepositoryState]);
 
   useEffect(() => {
     if (state.storageStatus === 'ready' || state.storageStatus === 'recovered') {
@@ -52,28 +56,14 @@ export default function App() {
 
   const createRecord = useCallback(() => dispatch({ type: 'record:create' }), []);
   const retryLoad = useCallback(() => {
-    const result = fleetPulseMatrixRepository.load();
-    dispatch({
-      type: 'bootstrap:success',
-      records: result.state.records,
-      preferences: result.state.preferences,
-      recovered: result.status === 'recovered',
-      error: result.error,
-    });
+    dispatchRepositoryState();
     navigate('operations');
-  }, [navigate]);
+  }, [dispatchRepositoryState, navigate]);
   const clearPersistedData = useCallback(() => {
     fleetPulseMatrixRepository.clear();
-    const result = fleetPulseMatrixRepository.load();
-    dispatch({
-      type: 'bootstrap:success',
-      records: result.state.records,
-      preferences: result.state.preferences,
-      recovered: false,
-      error: null,
-    });
+    dispatchRepositoryState(false);
     navigate('operations');
-  }, [navigate]);
+  }, [dispatchRepositoryState, navigate]);
   const resetPreferences = useCallback(() => dispatch({ type: 'preferences:reset' }), []);
   const savePreferences = useCallback(() => {
     dispatch({ type: 'preferences:save', preferences: { activePanel: state.activePanel } });
@@ -87,7 +77,7 @@ export default function App() {
       'status-4': () => dispatch({ type: 'panel:set', panel: 'operations' }),
       'priority-5': () => dispatch({ type: 'panel:set', panel: 'queue' }),
       'button-6-6': () => dispatch({ type: 'select', recordId: state.records[0]?.id ?? null }),
-      'button-7-7': () => dispatch({ type: 'select', recordId: state.records[1]?.id ?? state.records[0]?.id ?? null }),
+      'button-7-7': () => dispatch({ type: 'select', recordId: state.records[1]?.id ?? null }),
       'button-8-8': () => navigate('queue'),
       'button-9-9': () => navigate('settings'),
       'button-10-10': () => navigate('editor'),

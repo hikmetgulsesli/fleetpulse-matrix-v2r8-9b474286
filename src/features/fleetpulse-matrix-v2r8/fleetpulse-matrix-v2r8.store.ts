@@ -72,7 +72,7 @@ export function fleetPulseMatrixReducer(
     case 'bootstrap:start':
       return { ...state, storageStatus: 'loading', lastError: null };
     case 'bootstrap:success': {
-      const records = action.records?.length ? action.records : fleetPulseVehicleRecords;
+      const records = Array.isArray(action.records) ? action.records : fleetPulseVehicleRecords;
       const preferences = { ...fleetPulseDefaultPreferences, ...action.preferences };
       return {
         ...state,
@@ -112,7 +112,7 @@ export function fleetPulseMatrixReducer(
     }
     case 'record:create': {
       const nextRecord: FleetPulseVehicleRecord = {
-        id: `veh-${Date.now()}`,
+        id: createVehicleRecordId(),
         unit: 'FP-New',
         route: 'Unassigned',
         operator: 'Pending',
@@ -184,4 +184,11 @@ function routeToScreen(route: FleetPulseRoute): string {
     default:
       return 'VehicleOperationsFleetpulseMatrixV2r8';
   }
+}
+
+function createVehicleRecordId(): string {
+  if (typeof globalThis.crypto?.randomUUID === 'function') {
+    return `veh-${globalThis.crypto.randomUUID()}`;
+  }
+  return `veh-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
