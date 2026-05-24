@@ -10,7 +10,7 @@
 import { Circle, CircleUserRound, EllipsisVertical, Menu, Plus, Search, Settings, X } from "lucide-react";
 
 
-export type VehicleOperationsFleetpulseMatrixV2r8ActionId = "create-task-1" | "retry-load-2" | "create-record-3" | "status-4" | "priority-5" | "button-6-6" | "button-7-7" | "button-8-8" | "button-9-9" | "button-10-10" | "button-11-11" | "log-event-12" | "view-full-13";
+export type VehicleOperationsFleetpulseMatrixV2r8ActionId = "create-task-1" | "retry-load-2" | "create-record-3" | "status-4" | "priority-5" | "button-6-6" | "button-7-7" | "button-8-8" | "button-9-9" | "button-10-10" | "button-11-11" | "log-event-12" | "view-full-13" | "operations-1" | "queue-2" | "settings-3" | "help-4" | "logout-5";
 
 export interface VehicleOperationsFleetpulseMatrixV2r8Props {
   actions?: Partial<Record<VehicleOperationsFleetpulseMatrixV2r8ActionId, () => void>>;
@@ -22,15 +22,15 @@ export function VehicleOperationsFleetpulseMatrixV2r8({ actions }: VehicleOperat
       {/* SideNavBar */}
       <nav className="hidden xl:flex flex-col h-full py-6 px-4 gap-stack-tight bg-surface-container-low dark:bg-surface-container-lowest fixed left-0 top-0 w-sidebar-width border-r border-outline-variant dark:border-outline z-40">
       <div className="mb-8 px-3">
-      <h1 className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FleetPulse Matrix</h1>
+      <h1 className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-left">FleetPulse Matrix</h1>
       </div>
       <div className="flex items-center gap-3 px-3 mb-6">
       <div className="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
                       FM
                   </div>
       <div>
-      <div className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-sm">Fleet Manager</div>
-      <div className="font-body-sm text-body-sm text-on-surface-variant">Central Command</div>
+      <div className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-sm text-left">Fleet Manager</div>
+      <div className="font-body-sm text-body-sm text-on-surface-variant text-left">Central Command</div>
       </div>
       </div>
       <button className="w-full bg-primary text-on-primary py-2 px-4 rounded font-body-md text-body-md mb-6 hover:opacity-90 transition-opacity" type="button" data-action-id="create-task-1" onClick={actions?.["create-task-1"]}>
@@ -38,29 +38,29 @@ export function VehicleOperationsFleetpulseMatrixV2r8({ actions }: VehicleOperat
               </button>
       <div className="flex-1 flex flex-col gap-2">
       {/* Active Tab: Operations */}
-      <div className="flex items-center gap-3 bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-lg px-3 py-2 cursor-pointer active:scale-95 duration-150">
+      <a className="flex items-center gap-3 bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-lg px-3 py-2 cursor-pointer active:scale-95 duration-150" href="#" data-action-id="operations-1" onClick={actions?.["operations-1"]}>
       <Circle  style={{fontVariationSettings: "'FILL' 1"}} aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Operations</span>
-      </div>
+      </a>
       {/* Inactive Tabs */}
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      <a className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" href="#" data-action-id="queue-2" onClick={actions?.["queue-2"]}>
       <Circle aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Queue</span>
-      </div>
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      </a>
+      <a className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" href="#" data-action-id="settings-3" onClick={actions?.["settings-3"]}>
       <Settings aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Settings</span>
-      </div>
+      </a>
       </div>
       <div className="mt-auto flex flex-col gap-2 border-t border-outline-variant pt-4">
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      <a className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" href="#" data-action-id="help-4" onClick={actions?.["help-4"]}>
       <Circle aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Help</span>
-      </div>
-      <div className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg">
+      </a>
+      <a className="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest dark:hover:bg-surface-container-high transition-colors cursor-pointer active:scale-95 duration-150 rounded-lg" href="#" data-action-id="logout-5" onClick={actions?.["logout-5"]}>
       <Circle aria-hidden={true} focusable="false" />
       <span className="font-label-caps text-label-caps">Logout</span>
-      </div>
+      </a>
       </div>
       </nav>
       {/* Main Content Wrapper */}
@@ -225,7 +225,7 @@ export function VehicleOperationsFleetpulseMatrixV2r8({ actions }: VehicleOperat
       <h3 className="font-headline-md text-headline-md text-on-surface">V-8829 Details</h3>
       <p className="font-body-sm text-body-sm text-on-surface-variant">Volvo FH16</p>
       </div>
-      <button className="text-on-surface-variant hover:bg-surface-container p-1 rounded transition-colors" type="button" data-action-id="button-11-11" onClick={actions?.["button-11-11"]}>
+      <button className="text-on-surface-variant hover:bg-surface-container p-1 rounded transition-colors" type="button" data-action-id="button-11-11" onClick={actions?.["button-11-11"]} aria-label="close">
       <X aria-hidden={true} focusable="false" />
       </button>
       </div>
