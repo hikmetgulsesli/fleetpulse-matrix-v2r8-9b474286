@@ -18,12 +18,6 @@ import {
   getFleetPulseSnapshot,
   type FleetPulseRoute,
 } from './features/fleetpulse-matrix-v2r8/fleetpulse-matrix-v2r8.store';
-import { cancelVehicleEdit } from './features/surf-vehicle-editor/act_cancel_edit';
-import { saveVehicleRecord } from './features/surf-vehicle-editor/act_save_record';
-import { createVehicleRecord } from './features/surf-vehicle-operations/act_create_record';
-import { retryVehicleOperationsLoad } from './features/surf-vehicle-operations/act_retry_load';
-import { searchVehicleRecords } from './features/surf-vehicle-operations/act_search_records';
-import { selectVehicleRecord } from './features/surf-vehicle-operations/act_select_record';
 import { publishFleetPulseAppSnapshot } from './test/bridge';
 
 export default function App() {
@@ -60,9 +54,10 @@ export default function App() {
     dispatch({ type: 'navigate', route });
   }, []);
 
-  const createRecord = useCallback(() => createVehicleRecord({ dispatch }), []);
+  const createRecord = useCallback(() => dispatch({ type: 'record:create' }), []);
   const retryLoad = useCallback(() => {
-    retryVehicleOperationsLoad({ reload: dispatchRepositoryState, navigate });
+    dispatchRepositoryState();
+    navigate('operations');
   }, [dispatchRepositoryState, navigate]);
   const clearPersistedData = useCallback(() => {
     fleetPulseMatrixRepository.clear();
@@ -79,21 +74,16 @@ export default function App() {
       'create-task-1': createRecord,
       'retry-load-2': retryLoad,
       'create-record-3': createRecord,
-      'status-4': () => searchVehicleRecords({ dispatch, panel: 'operations' }),
-      'priority-5': () => searchVehicleRecords({ dispatch, panel: 'queue' }),
-      'button-6-6': () => selectVehicleRecord({ dispatch, records: state.records, index: 0 }),
-      'button-7-7': () => selectVehicleRecord({ dispatch, records: state.records, index: 1 }),
+      'status-4': () => dispatch({ type: 'panel:set', panel: 'operations' }),
+      'priority-5': () => dispatch({ type: 'panel:set', panel: 'queue' }),
+      'button-6-6': () => dispatch({ type: 'select', recordId: state.records[0]?.id ?? null }),
+      'button-7-7': () => dispatch({ type: 'select', recordId: state.records[1]?.id ?? null }),
       'button-8-8': () => navigate('queue'),
       'button-9-9': () => navigate('settings'),
       'button-10-10': () => navigate('editor'),
       'button-11-11': () => dispatch({ type: 'error:set', error: null }),
       'log-event-12': () => dispatch({ type: 'panel:set', panel: 'details' }),
       'view-full-13': () => navigate('editor'),
-      'operations-1': () => navigate('operations'),
-      'queue-2': () => navigate('queue'),
-      'settings-3': () => navigate('settings'),
-      'help-4': () => dispatch({ type: 'panel:set', panel: 'details' }),
-      'logout-5': () => navigate('operations'),
     }),
     [createRecord, navigate, retryLoad, state.records],
   );
@@ -140,8 +130,8 @@ export default function App() {
   const editorActions = useMemo<Partial<Record<VehicleEditorFleetpulseMatrixV2r8ActionId, () => void>>>(
     () => ({
       'create-task-1': createRecord,
-      'cancel-edit-2': () => cancelVehicleEdit({ navigate }),
-      'save-record-3': () => saveVehicleRecord({ navigate }),
+      'cancel-edit-2': () => navigate('operations'),
+      'save-record-3': () => navigate('operations'),
       'operations-1': () => navigate('operations'),
       'queue-2': () => navigate('queue'),
       'settings-3': () => navigate('settings'),

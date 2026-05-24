@@ -79,7 +79,7 @@ export function QueueAndStatusManagementFleetpulseMatrixV2r8({ actions }: QueueA
       <button className="p-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 rounded-full flex items-center justify-center" type="button" data-action-id="button-3-3" onClick={actions?.["button-3-3"]}>
       <Circle aria-hidden={true} focusable="false" />
       </button>
-      <button className="p-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 rounded-full flex items-center justify-center" type="button" data-action-id="button-4-4" onClick={actions?.["button-4-4"]}>
+      <button className="p-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors cursor-pointer active:opacity-80 rounded-full flex items-center justify-center" type="button" aria-label="Open user profile" data-action-id="button-4-4" disabled={!actions?.["button-4-4"]} onClick={actions?.["button-4-4"]}>
       <CircleUserRound aria-hidden={true} focusable="false" />
       </button>
       </div>
