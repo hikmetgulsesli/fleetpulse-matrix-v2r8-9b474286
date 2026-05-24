@@ -84,6 +84,11 @@ export default function App() {
       'button-11-11': () => dispatch({ type: 'error:set', error: null }),
       'log-event-12': () => dispatch({ type: 'panel:set', panel: 'details' }),
       'view-full-13': () => navigate('editor'),
+      'operations-1': () => navigate('operations'),
+      'queue-2': () => navigate('queue'),
+      'settings-3': () => navigate('settings'),
+      'help-4': () => dispatch({ type: 'panel:set', panel: 'details' }),
+      'logout-5': () => navigate('operations'),
     }),
     [createRecord, navigate, retryLoad, state.records],
   );
